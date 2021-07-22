@@ -11,13 +11,13 @@ import SwiftUI
 
 
 class ViewModel: ObservableObject {
-    //anything that is an observerableObject,  you can observe it (hence the name)
+
     
     @Published var image: Image?
     
     func fetchNewImage(){
-        //all this is doing is fwtching the image and
-        //pu
+        //all this is doing is fetching the image and
+        
         guard let url = URL(string: "https://random.imagecdn.app/500/500") else {
             return
         }
@@ -28,7 +28,7 @@ class ViewModel: ObservableObject {
                 self.image = Image(uiImage: uiImage)
             }
         }
-        task.resume() //this is actually going ot kick off the task and fetch the contents of the url
+        task.resume() //this is actually going to kick off the task and fetch the contents of the url
     }
 }
 
@@ -45,7 +45,7 @@ struct ContentView: View {
                 
                 
                 if let image = viewModel.image  {
-                    ZStack{
+                    ZStack{ 
                         image
                             .resizable()
                             .foregroundColor(.orange)
