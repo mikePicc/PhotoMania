@@ -1,2 +1,2 @@
 # PhotoMania
-Very first app tutorial that I completed (iOS Academy)
+Very first app that I completed :))
